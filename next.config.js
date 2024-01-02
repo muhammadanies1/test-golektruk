@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/login.png',
       },
+      {
+        protocol: 'https',
+        hostname: 'golektruk.com',
+        port: '',
+        pathname: '/registrasi.png',
+      },
     ],
   },
 }

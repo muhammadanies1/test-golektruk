@@ -1,19 +1,28 @@
-import Image from "next/image";
+"use client";
 
-import IconGolekTruk from "../assets/icon-golektruk.svg";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import { IconGolekTruk } from "@/assets";
 
 export default function Home() {
+  const router = useRouter();
+
+  function toRegister() {
+    router.push("/register");
+  }
+
   return (
     <div className="container-pages">
       <div className="columns-login-left">
-        <div className="flex flex-col gap-5 w-[510px]">
+        <div className="container-columns">
           <Image
             src="https://golektruk.com/login.png"
             alt="image-login"
             width={510}
             height={453}
           />
-          <p className="font-bold text-center text-3xl flex justify-center items-center">
+          <p className="label-message">
             <span>
               Masuk untuk Temukan informasi dan relasi baru setiap hari!
             </span>
@@ -39,7 +48,9 @@ export default function Home() {
           <button>Masuk</button>
           <p>
             <span className="text-black">Belum mempunyai akun? </span>
-            <span className="label-daftar">Daftar</span>
+            <span onClick={toRegister} className="label-daftar">
+              Daftar
+            </span>
           </p>
         </div>
       </div>

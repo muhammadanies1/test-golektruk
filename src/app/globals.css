@@ -32,6 +32,12 @@ body {
     @apply flex flex-row bg-white h-screen;
   }
 
+  .container-columns {
+    @apply flex flex-col gap-5 w-[510px];
+  }
+
+  /* LOGIN PAGES */
+
   .container-pages .columns-login-left {
     @apply basis-1/2 flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500;
   }
@@ -42,6 +48,10 @@ body {
 
   .card {
     @apply border-2 h-[453px] w-[510px] shadow-lg flex flex-col p-10;
+  }
+
+  .card-register {
+    @apply border-2 h-[750px] w-[510px] shadow-lg flex flex-col p-10;
   }
 
   .container-logo {
@@ -68,6 +78,18 @@ body {
     @apply border border-gray-500 h-[40px] rounded-lg px-2 text-black;
   }
 
+  .field-container-images {
+    @apply w-full flex flex-col;
+  }
+
+  .field-container-images label {
+    @apply text-black font-semibold opacity-70;
+  }
+
+  .field-container-images input .input-image {
+    @apply h-[40px];
+  }
+
   .card button {
     @apply bg-green-600 w-full rounded-xl mt-5 h-[40px] text-lg font-semibold;
   }
@@ -78,5 +100,22 @@ body {
 
   .card .label-daftar {
     @apply text-green-600 cursor-pointer font-bold;
+  }
+
+  .card-register button {
+    @apply bg-green-600 w-full rounded-xl mt-5 h-[40px] text-lg font-semibold;
+  }
+
+  .card-register p {
+    @apply mt-5 flex justify-center gap-1;
+  }
+
+  .card-register .label-daftar {
+    @apply text-green-600 cursor-pointer font-bold;
+  }
+
+  /* LABEL */
+  .label-message {
+    @apply font-bold text-center text-3xl flex justify-center items-center;
   }
 }
